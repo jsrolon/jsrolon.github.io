@@ -1,0 +1,3 @@
+paginate: 3
+permalink: /writings/:title
+markdown: kramdown
