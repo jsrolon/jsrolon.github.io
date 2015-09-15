@@ -1,3 +1,5 @@
 paginate: 3
 permalink: /writings/:title
 markdown: kramdown
+sass:
+  sass_dir: _sass
