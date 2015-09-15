@@ -4,6 +4,8 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700);
 
+$footer-height: 60px;
+
 /******************
 * Site
 *******************/
@@ -14,6 +16,7 @@ html, body {
 	
 	font-family: 'Alegreya', serif;
 	color: rgba(0, 0, 0, 0.75);
+	background-image: url(../img/pattern.png);
 }
 
 body {
@@ -28,26 +31,44 @@ ul {
 * Header & Navigation
 *******************/
 
-header {
-	font-size: 40pt;
-	line-height: 100px;
-	font-weight: 700;
+.hero {
+	min-height: calc(100vh - 60px);
+	position: relative;
 
-	text-align: center;
-	text-decoration: none;
-	
-	height: 100px;
-	width: 60%;
-	
-	margin: auto;
-	padding-top: 3rem;
-
-	border-bottom: 5px solid rgba(0, 0, 0, 0.25);
-	transition: border 1000ms;
+	background: url(../img/pub.jpg) no-repeat center center fixed;
+	background-size: cover;
 }
 
-header:hover {
-	border-bottom: 5px solid rgba(17, 78, 186, 0.45);
+.hero::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-content-wrapper {
+	z-index: 2;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 35%;
+	text-align: center;
+}
+
+.hero-content {
+	color: white;
+	max-width: calc(700px + 2rem);
+	margin: 0px auto;
+	position: relative;
+	padding: 1rem;
+}
+
+.hero-content h1 {
+	font-size: 7.5rem;
 }
 
 nav {
@@ -93,22 +114,14 @@ p {
 * Content
 *******************/
 
-main {
-	padding-top: 1.5rem;
-	padding-bottom: calc( 80px + 2.5rem );
-
-	min-height: calc( 100% - 165.5px - 8.5rem );
-
-	width: 90%;
-	margin: auto;
-}
-
 .column {
 	text-align: center;
 	padding: 1rem 2.5rem;
 
 	width: calc( 50% - 5rem);
 	margin: auto;
+
+	background-color: white;
 }
 
 .column.left {
@@ -127,8 +140,8 @@ main {
 * Footer
 *******************/
 
-.footer-image {
-	background-image: url(../img/background.jpg);
+.footer-wrapper {
+	//background-image: url(../img/background.jpg);
 	background-position: center;
 	background-size: cover;
 
@@ -142,9 +155,9 @@ main {
 
 footer {
 	text-align: center;
-	line-height: 80px;
+	line-height: 60px;
 	color: #fff;
 
-	height: 80px;
-	background-color: rgba(0, 0, 0, 0.65);
+	height: 60px;
+	background-color: rgb(0, 0, 0);
 }
