@@ -9,8 +9,12 @@
 	{{ content }}
 	<div class="footer-wrapper">
 	<footer>
-		&copy; 2014 - {{ 'now' | date: "%Y" }} by JS Rolón &sdot; Source available at <a href="http://github.com/jsrolon/jsrolon.github.io">Github</a>.
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a> &sdot; 2014 - {{ 'now' | date: "%Y" }} by JS Rolón &sdot; Source available @ <a href="http://github.com/jsrolon/jsrolon.github.io">Github</a>.
 	</footer>
 	</div>
+	{% if page.title == 'Home' %}
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="js/map.js"></script>
+	{% endif %}
 	</body>
 </html>
