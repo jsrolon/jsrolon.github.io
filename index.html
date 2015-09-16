@@ -28,7 +28,12 @@ title: Home
 </div>
 
 <div class="blog-content">
-<h1>HOLI</h1>
+<div class="blog-content-wrapper">
+  <div class="column left">
+  <h1>LEFT</h1>
+</div>
+<div class="column right">
+  <h1>HOLI</h1>
   <ul>
       {% for post in site.posts %}
         <li>
@@ -40,4 +45,6 @@ title: Home
         </li>
       {% endfor %}
     </ul>
+</div>
+</div>
 </div>

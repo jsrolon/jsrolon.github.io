@@ -39,6 +39,28 @@ ul {
 
 	background: url(../img/pub.jpg) no-repeat center center fixed;
 	background-size: cover;
+
+	.column {
+		text-align: center;
+		padding: 1rem 2.5rem;
+
+		width: calc( 40% - 5rem);
+		margin: auto;
+
+		color: white;
+	}
+
+	.column.left {
+		line-height: 1vmin;
+
+		text-align: left;
+		float: left;
+	}
+
+	.column.right {
+		float: right;
+		text-align: justify;
+	}
 }
 
 .hero::after {
@@ -57,7 +79,7 @@ ul {
 	position: absolute;
 	left: 0px;
 	right: 0px;
-	top: 3%;
+	top: 2%;
 	text-align: center;
 }
 
@@ -71,7 +93,7 @@ ul {
 
 .hero-content h1 {
 	font-size: 8vmin;
-	font-weight: 700;
+	font-weight: 400;
 	letter-spacing: 0.75vmin;
 	margin-bottom: 2vmin;
 }
@@ -136,34 +158,45 @@ p {
 *******************/
 
 .blog-content {
-	min-height: calc(100vh - 20px);
+	min-height: 100vh;
 	position: relative;
+
+	.column {
+		border: 1px solid rgba(0,0,0,0.15);
+		text-align: center;
+		padding: 1rem 2.5rem;
+
+		background-color: rgb(255,250,250);
+
+		width: calc(50% - 6vw);
+		margin-left: 3vw;
+		margin-right: 3vw;
+
+		color: black;
+	}
+
+	.column.left {
+		line-height: 1vmin;
+
+		text-align: left;
+		float: left;
+	}
+
+	.column.right {
+		float: right;
+		text-align: left;	
+	}
 }
 
-.column {
-	text-align: center;
-	padding: 1rem 2.5rem;
+.blog-content-wrapper {
+	position: absolute;
+	width: 100%;
 
-	width: calc( 40% - 5rem);
-	margin: auto;
-
-	color: white;
-}
-
-.column.left {
-	line-height: 1vmin;
-
-	text-align: left;
-	float: left;
-}
-
-.column.right {
-	float: right;
-	text-align: justify;
+	margin-top: 3vh;
 }
 
 .contact-list {
-	margin-top: 45%;
+	margin-top: 22.5vmin;
 	margin-left: 12vmin;
 	width: 85%;
 	display: inline-block;
@@ -202,6 +235,8 @@ p {
 	position: fixed;
 
 	width: 100%;
+
+	border-top: 1px solid rgba(255,255,255,0.5);
 }
 
 footer {
