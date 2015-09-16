@@ -121,12 +121,17 @@ a {
 }
 
 a:hover {
-	color: #D14841;
+	color: #B8312F;
 	text-decoration: none;	
 }
 
-a:visited {
+a:active {
 	color: #B8312F;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #D14841;
 	text-decoration: none;
 }
 
@@ -145,10 +150,6 @@ a:visited {
 	text-decoration: none;
 }
 
-.column.left > h2 {
-	margin-top: -5px;
-}
-
 p {
 	line-height: 1.8rem;
 }
@@ -162,15 +163,24 @@ p {
 	position: relative;
 
 	.column {
+
+		h1 {
+			margin-bottom: 2rem;
+		}
+
+		font-size: 2.25vmin;
+
 		border: 1px solid rgba(0,0,0,0.15);
 		text-align: center;
-		padding: 1rem 2.5rem;
+		padding: 0rem 2.5rem;
 
 		background-color: rgb(255,250,250);
 
 		width: calc(50% - 6vw);
 		margin-left: 3vw;
 		margin-right: 3vw;
+
+		height: calc(93vh - 60px);
 
 		color: black;
 	}
@@ -184,7 +194,15 @@ p {
 
 	.column.right {
 		float: right;
-		text-align: left;	
+		text-align: left;
+
+		ul {
+			padding-left: 0.5rem;
+		}	
+
+		li {
+			margin-bottom: 2.5rem;
+		}
 	}
 }
 
@@ -197,8 +215,8 @@ p {
 
 .contact-list {
 	margin-top: 22.5vmin;
-	margin-left: 12vmin;
-	width: 85%;
+	margin-left: 10vmin;
+	width: 90%;
 	display: inline-block;
 }
 
@@ -214,10 +232,33 @@ p {
 	font-size: 3.5vmin;
 }
 
+/******************
+* Objects with IDs
+*******************/
+
 #map {
 	width: 100%;
 	height: 25vmin;
 	margin-bottom: 3vmin;
+}
+
+#week-song {
+	position: absolute;
+	bottom: 2.5rem;
+	margin: auto;
+}
+
+.unfalsifiable-statements {
+	position: relative;
+	padding-left: 0.2rem;
+	padding-top: 0;
+
+	table {
+		border-collapse: separate;
+		width: 100%;
+		border-top: 5rem;
+		border-spacing: 2rem;
+	}
 }
 
 /******************

@@ -30,17 +30,39 @@ title: Home
 <div class="blog-content">
 <div class="blog-content-wrapper">
   <div class="column left">
-  <h1>LEFT</h1>
+    <h2>Unfalsifiable Statements</h2>
+    <div class="unfalsifiable-statements">
+      <p>This is a pretty small selection of albums I would call really good.</p>
+      <table id="albums">
+        <tr>
+          <th>Year</th>
+          <th>Album</th>
+          <th>Artist</th>
+        </tr>
+        {% assign albums = site.albums | sort: 'year' %}
+        {% for album in albums %}
+        <tr>
+          <td>{{ album.year }}</td>
+          <td>{{ album.name }}</td>
+          <td>{{ album.artist }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div id="week-song">
+      <h2>Song of The Week</h2>
+      <iframe src="https://embed.spotify.com/?uri=spotify:track:4Y30Ykgj7mmrxW3FfKquFg" width="500" height="80" frameborder="0" allowtransparency="true"></iframe>
+    </div>
 </div>
 <div class="column right">
-  <h1>HOLI</h1>
+  <h2>Writings</h2>
   <ul>
       {% for post in site.posts %}
         <li>
           <a href="{{ post.url }}">
-          {{ post.date | date: "%d %B %Y" }} <br/>
+          <i>{{ post.date | date: "%d %B %Y" }}</i> <br/>
           <b>{{ post.title }}</b> <br/>
-          <i>{{ post.description }}</i>
+          <p>{{ post.description }}</p>
           </a>
         </li>
       {% endfor %}
